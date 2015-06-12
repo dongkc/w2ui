@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>w2ui Demos</title>
+    <link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.min.css" />
+    <script src="../libs/jquery/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.min.js"></script>
+</head>
+<body>
+    <div id="mySidebar" style="height: 450px;width:250px;"></div>
+</body>
+<script>
+$(function() {
+  $('#mySidebar').w2sidebar({
+    name: 'mySidebar',
+    img   : null,
+    nodes : [
+      { id: 'level-1', text: 'Level 1', img: 'icon-folder', expanded:true,
+        nodes: [
+          { id: 'level-1-1', text: 'Level 1.1'},
+          { id: 'level-1-2', text: 'Level 1.2'},
+          { id: 'level-1-3', text: 'Level 1.3'}
+        ]
+      }
+    ]
+  });
+});
+</script>
+</html>

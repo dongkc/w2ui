@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>layout test</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../dist/w2ui.css" id="mainCSS" /> 
+    <script src="../libs/jquery/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.min.js"></script>
+  </head>
+  <body>
+    <div id="myLayout" style="height: 400px"></div>
+  </body>
+  <script type="text/javascript" charset="utf-8">
+$(function() {
+  $('#myLayout').w2layout({
+    name: 'myLayout',
+    panels: [
+      { type: 'top', size:60, style:'background-color: blue', padding:0},
+      { type: 'left', size:150, resizable: true, style:'background-color: orange', padding:0},
+      { type: 'right', size:150, resizable: true}
+    ]
+  });
+  w2ui.myLayout.show('top');
+});
+  </script>
+</html>
